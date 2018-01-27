@@ -14,9 +14,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        UIApplication.shared.statusBarStyle = .lightContent
+        
+        let defaults = UserDefaults.standard
+        if defaults.string(forKey: "WalletAddress") != nil {
+            return true
+        }
+        
+        // Present PasscodeVC
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main) // Access main storyboard
+        let searchVC = storyboard.instantiateViewController(withIdentifier: "SearchVC")
+        window?.makeKeyAndVisible()
+        window?.rootViewController?.present(searchVC, animated: true, completion: nil)
+        
         return true
     }
 

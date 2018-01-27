@@ -7,23 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		360B0311F7CDD8047FC842D9 /* Pods_Garlicoin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 491149BE3A78104BA91C6046 /* Pods_Garlicoin.framework */; };
 		5F226E44201A956700D8BD97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F226E43201A956700D8BD97 /* AppDelegate.swift */; };
-		5F226E46201A956700D8BD97 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F226E45201A956700D8BD97 /* ViewController.swift */; };
 		5F226E49201A956700D8BD97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F226E47201A956700D8BD97 /* Main.storyboard */; };
 		5F226E4C201A956700D8BD97 /* Garlicoin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5F226E4A201A956700D8BD97 /* Garlicoin.xcdatamodeld */; };
 		5F226E4E201A956700D8BD97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F226E4D201A956700D8BD97 /* Assets.xcassets */; };
 		5F226E51201A956700D8BD97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F226E4F201A956700D8BD97 /* LaunchScreen.storyboard */; };
+		5F226E59201AA0C500D8BD97 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F226E58201AA0C500D8BD97 /* SearchVC.swift */; };
+		5F226E5C201AA1E900D8BD97 /* DisplayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F226E5B201AA1E900D8BD97 /* DisplayVC.swift */; };
+		5F26E0D4201D33EC003C2E48 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F26E0D3201D33EC003C2E48 /* UIViewControllerExtension.swift */; };
+		5F8962A5201AA95300E4D2BC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8962A4201AA95300E4D2BC /* Constants.swift */; };
+		5F8962A7201AB0C000E4D2BC /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8962A6201AB0C000E4D2BC /* TransactionCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		491149BE3A78104BA91C6046 /* Pods_Garlicoin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Garlicoin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F226E40201A956700D8BD97 /* Garlicoin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Garlicoin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F226E43201A956700D8BD97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5F226E45201A956700D8BD97 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5F226E48201A956700D8BD97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5F226E4B201A956700D8BD97 /* Garlicoin.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Garlicoin.xcdatamodel; sourceTree = "<group>"; };
 		5F226E4D201A956700D8BD97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5F226E50201A956700D8BD97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5F226E52201A956700D8BD97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F226E58201AA0C500D8BD97 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		5F226E5B201AA1E900D8BD97 /* DisplayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayVC.swift; sourceTree = "<group>"; };
+		5F26E0D3201D33EC003C2E48 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		5F8962A4201AA95300E4D2BC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5F8962A6201AB0C000E4D2BC /* TransactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
+		70639095C52F211B11ED09DA /* Pods-Garlicoin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Garlicoin.release.xcconfig"; path = "Pods/Target Support Files/Pods-Garlicoin/Pods-Garlicoin.release.xcconfig"; sourceTree = "<group>"; };
+		D5F2B34E5DB905AE86608A59 /* Pods-Garlicoin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Garlicoin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Garlicoin/Pods-Garlicoin.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +43,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				360B0311F7CDD8047FC842D9 /* Pods_Garlicoin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3AC7B0B17186F5C7595211B7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D5F2B34E5DB905AE86608A59 /* Pods-Garlicoin.debug.xcconfig */,
+				70639095C52F211B11ED09DA /* Pods-Garlicoin.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		5F226E37201A956700D8BD97 = {
 			isa = PBXGroup;
 			children = (
 				5F226E42201A956700D8BD97 /* Garlicoin */,
 				5F226E41201A956700D8BD97 /* Products */,
+				3AC7B0B17186F5C7595211B7 /* Pods */,
+				CB7A86EA22564F06B20954DB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,8 +80,12 @@
 		5F226E42201A956700D8BD97 /* Garlicoin */ = {
 			isa = PBXGroup;
 			children = (
+				5F8962AA201AB0D600E4D2BC /* Utilities */,
+				5F26E0D2201D339F003C2E48 /* Extensions */,
+				5F26E0D3201D33EC003C2E48 /* UIViewControllerExtension.swift */,
+				5F8962A8201AB0C400E4D2BC /* Views */,
+				5F226E5A201AA0CB00D8BD97 /* VCs */,
 				5F226E43201A956700D8BD97 /* AppDelegate.swift */,
-				5F226E45201A956700D8BD97 /* ViewController.swift */,
 				5F226E47201A956700D8BD97 /* Main.storyboard */,
 				5F226E4D201A956700D8BD97 /* Assets.xcassets */,
 				5F226E4F201A956700D8BD97 /* LaunchScreen.storyboard */,
@@ -67,6 +95,54 @@
 			path = Garlicoin;
 			sourceTree = "<group>";
 		};
+		5F226E5A201AA0CB00D8BD97 /* VCs */ = {
+			isa = PBXGroup;
+			children = (
+				5F226E58201AA0C500D8BD97 /* SearchVC.swift */,
+				5F226E5B201AA1E900D8BD97 /* DisplayVC.swift */,
+			);
+			path = VCs;
+			sourceTree = "<group>";
+		};
+		5F26E0D2201D339F003C2E48 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5F8962A8201AB0C400E4D2BC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5F8962A9201AB0CF00E4D2BC /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5F8962A9201AB0CF00E4D2BC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				5F8962A6201AB0C000E4D2BC /* TransactionCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		5F8962AA201AB0D600E4D2BC /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				5F8962A4201AA95300E4D2BC /* Constants.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		CB7A86EA22564F06B20954DB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				491149BE3A78104BA91C6046 /* Pods_Garlicoin.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +150,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5F226E55201A956700D8BD97 /* Build configuration list for PBXNativeTarget "Garlicoin" */;
 			buildPhases = (
+				F290A71890C99BC927AD4972 /* [CP] Check Pods Manifest.lock */,
 				5F226E3C201A956700D8BD97 /* Sources */,
 				5F226E3D201A956700D8BD97 /* Frameworks */,
 				5F226E3E201A956700D8BD97 /* Resources */,
+				0B87E382F3EE8398426D97FB /* [CP] Embed Pods Frameworks */,
+				23C270F061C19CD1CA06A111 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -134,13 +213,77 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0B87E382F3EE8398426D97FB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Garlicoin/Pods-Garlicoin-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftSoup/SwiftSoup.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSoup.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Garlicoin/Pods-Garlicoin-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		23C270F061C19CD1CA06A111 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Garlicoin/Pods-Garlicoin-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F290A71890C99BC927AD4972 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Garlicoin-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5F226E3C201A956700D8BD97 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F226E46201A956700D8BD97 /* ViewController.swift in Sources */,
+				5F8962A5201AA95300E4D2BC /* Constants.swift in Sources */,
+				5F226E59201AA0C500D8BD97 /* SearchVC.swift in Sources */,
+				5F8962A7201AB0C000E4D2BC /* TransactionCell.swift in Sources */,
+				5F226E5C201AA1E900D8BD97 /* DisplayVC.swift in Sources */,
 				5F226E44201A956700D8BD97 /* AppDelegate.swift in Sources */,
+				5F26E0D4201D33EC003C2E48 /* UIViewControllerExtension.swift in Sources */,
 				5F226E4C201A956700D8BD97 /* Garlicoin.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,6 +419,7 @@
 		};
 		5F226E56201A956700D8BD97 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5F2B34E5DB905AE86608A59 /* Pods-Garlicoin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -291,6 +435,7 @@
 		};
 		5F226E57201A956700D8BD97 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70639095C52F211B11ED09DA /* Pods-Garlicoin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
