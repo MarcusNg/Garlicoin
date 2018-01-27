@@ -82,7 +82,6 @@
 			children = (
 				5F8962AA201AB0D600E4D2BC /* Utilities */,
 				5F26E0D2201D339F003C2E48 /* Extensions */,
-				5F26E0D3201D33EC003C2E48 /* UIViewControllerExtension.swift */,
 				5F8962A8201AB0C400E4D2BC /* Views */,
 				5F226E5A201AA0CB00D8BD97 /* VCs */,
 				5F226E43201A956700D8BD97 /* AppDelegate.swift */,
@@ -107,6 +106,7 @@
 		5F26E0D2201D339F003C2E48 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				5F26E0D3201D33EC003C2E48 /* UIViewControllerExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
