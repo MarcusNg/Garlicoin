@@ -14,3 +14,6 @@ let TO_SEARCH = "toSearch"
 
 // URLS
 let PRICE_URL = "https://api.coinmarketcap.com/v1/ticker/garlicoin/"
+
+// Defaults
+let defaults = UserDefaults(suiteName: "group.com.MarcusNg.GarlicoinToday")

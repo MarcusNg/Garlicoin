@@ -40,12 +40,12 @@ class DisplayVC: UIViewController {
         refreshControl.tintColor = UIColor(red: 0.992, green: 0.892, blue: 0.536, alpha: 1.0)
         tableView.addSubview(refreshControl)
         
-        if let walletAddress = UserDefaults.standard.string(forKey: "WalletAddress") {
+        if let walletAddress = defaults?.string(forKey: "WalletAddress") {
             address = walletAddress
             addressLbl.text = "\(walletAddress)"
-            if let grlc = UserDefaults.standard.double(forKey: "GRLC") as? Double {
-                coinsLbl.text = String(describing: grlc)
-                if let usdPrice = UserDefaults.standard.double(forKey: "Price") as? Double {
+            if let grlc = defaults?.double(forKey: "GRLC") as? Double {
+                coinsLbl.text = "\(grlc)"
+                if let usdPrice = defaults?.double(forKey: "Price") as? Double {
                     let price: Double = grlc * usdPrice
                     valueLbl.text = formattedUSD(usd: price)
                     priceLbl.text = formattedUSD(usd: usdPrice)
@@ -102,10 +102,10 @@ class DisplayVC: UIViewController {
 //    }
     
     @IBAction func removeBtnPressed(_ sender: Any) {
-        let alert = UIAlertController(title: "Remove Saved Wallet Address", message: "Are you sure?", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Change Wallet Address", message: "Are you sure?", preferredStyle: .alert)
         
         let yesAction = UIAlertAction(title: "Yes", style: .destructive, handler: { (_) in
-            UserDefaults.standard.removeObject(forKey: "WalletAddress")
+            defaults?.removeObject(forKey: "WalletAddress")
             self.performSegue(withIdentifier: TO_SEARCH, sender: nil)
         })
         
@@ -134,13 +134,13 @@ class DisplayVC: UIViewController {
         var ctr = 0
         if address != nil {
             // Balance
-            balanceUpdate { (success) in
+            DataService.instance.balanceUpdate(address: address!) { (balance, success) in
                 if success {
-                    let coins = UserDefaults.standard.double(forKey: "GRLC")
-                    self.coinsLbl.text = String(describing: coins)
+                    let coins = defaults?.double(forKey: "GRLC")
+                    self.coinsLbl.text = "\(coins!)"
                 } else {
-                    let coins = UserDefaults.standard.double(forKey: "GRLC")
-                    self.coinsLbl.text = String(describing: coins)
+                    let coins = defaults?.double(forKey: "GRLC")
+                    self.coinsLbl.text = "\(coins!)"
                 }
                 ctr += 1
                 if ctr == 3 {
@@ -160,11 +160,12 @@ class DisplayVC: UIViewController {
                 }
             })
             // Price
-            PriceService.instance.getPriceUSD(completionHandler: { (usdPrice, success)  in
+            DataService.instance.getPriceUSD(completionHandler: { (usdPrice, success)  in
                 if success {
-                    if let grlc = UserDefaults.standard.double(forKey: "GRLC") as? Double {
+                    if let grlc = defaults?.double(forKey: "GRLC") as? Double {
                         let price: Double = grlc * usdPrice
                         self.valueLbl.text = self.formattedUSD(usd: price)
+                        self.priceLbl.text = self.formattedUSD(usd: usdPrice)
                     }
                 }
                 ctr += 1
@@ -174,21 +175,6 @@ class DisplayVC: UIViewController {
                 }
             })
         }
-    }
-    
-    func balanceUpdate(completionHandler: @escaping (_ success: Bool) -> ()) {
-        let balanceURL = "https://explorer.grlc-bakery.fun/ext/getbalance/\(address!)"
-        Alamofire.request(balanceURL).responseJSON(completionHandler: { (response) in
-            if let value = response.result.value {
-                let json = JSON(value)
-                if json["error"] != JSON.null {
-                    completionHandler(false)
-                    return
-                }
-                UserDefaults.standard.set(json.double, forKey: "GRLC")
-                completionHandler(true)
-            }
-        })
     }
     
     func getTransactions(completionHandler: @escaping (_ success: Bool) -> ()) {
@@ -236,17 +222,12 @@ class DisplayVC: UIViewController {
     }
     
     func updatePrice() {
-        if let grlc = UserDefaults.standard.double(forKey: "GRLC") as? Double {
-            if let priceUSD = UserDefaults.standard.double(forKey: "Price") as? Double {
+        if let grlc = defaults?.double(forKey: "GRLC") as? Double {
+            if let priceUSD = defaults?.double(forKey: "Price") as? Double {
                 valueLbl.text = String(describing: grlc * priceUSD)
                 priceLbl.text = String(describing: priceUSD)
             }
         }
-    }
-    
-    func formattedUSD(usd: Double) -> String {
-        let formatted = String(format: "$%.2f", usd)
-        return formatted
     }
     
 }

@@ -1,0 +1,6 @@
+framework module Pods_TodayGarlicoinWidget {
+  umbrella header "Pods-TodayGarlicoinWidget-umbrella.h"
+
+  export *
+  module * { export * }
+}

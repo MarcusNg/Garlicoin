@@ -33,10 +33,10 @@ class SearchVC: UIViewController {
                     self.present(alert, animated: true, completion: nil)
                     return
                 }
-                UserDefaults.standard.set(address, forKey: "WalletAddress")
-                UserDefaults.standard.set(json.double, forKey: "GRLC")
+                defaults?.set(address, forKey: "WalletAddress")
+                defaults?.set(json.double, forKey: "GRLC")
                 
-                PriceService.instance.getPriceUSD(completionHandler: { (price, success) in
+                DataService.instance.getPriceUSD(completionHandler: { (price, success) in
                     if success {
                         self.performSegue(withIdentifier: TO_DISPLAY, sender: nil)
                     }

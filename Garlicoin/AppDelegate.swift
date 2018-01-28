@@ -19,8 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UIApplication.shared.statusBarStyle = .lightContent
         
-        let defaults = UserDefaults.standard
-        if defaults.string(forKey: "WalletAddress") != nil {
+        if defaults?.string(forKey: "WalletAddress") != nil {
             return true
         }
         

@@ -16,14 +16,43 @@
 		5F226E5C201AA1E900D8BD97 /* DisplayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F226E5B201AA1E900D8BD97 /* DisplayVC.swift */; };
 		5F26E0D4201D33EC003C2E48 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F26E0D3201D33EC003C2E48 /* UIViewControllerExtension.swift */; };
 		5F26E0D6201D757B003C2E48 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F26E0D5201D757B003C2E48 /* CardView.swift */; };
-		5F26E0D8201D83D7003C2E48 /* PriceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F26E0D7201D83D7003C2E48 /* PriceService.swift */; };
+		5F26E0D8201D83D7003C2E48 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F26E0D7201D83D7003C2E48 /* DataService.swift */; };
 		5F26E0DB201D8DED003C2E48 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F26E0DA201D8DED003C2E48 /* RoundedButton.swift */; };
 		5F26E0DD201D9D5A003C2E48 /* PlaceholderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F26E0DC201D9D59003C2E48 /* PlaceholderTextField.swift */; };
-		5F26E0DF201E35AC003C2E48 /* TodayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F26E0DE201E35AC003C2E48 /* TodayVC.swift */; };
-		5F26E0E3201E363F003C2E48 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F26E0E2201E363F003C2E48 /* MainInterface.storyboard */; };
+		5F26E0EA201E3710003C2E48 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F26E0E9201E3710003C2E48 /* NotificationCenter.framework */; };
+		5F26E0ED201E3710003C2E48 /* TodayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F26E0EC201E3710003C2E48 /* TodayVC.swift */; };
+		5F26E0F0201E3710003C2E48 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F26E0EE201E3710003C2E48 /* MainInterface.storyboard */; };
+		5F26E0F4201E3710003C2E48 /* TodayGarlicoinWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5F26E0E8201E3710003C2E48 /* TodayGarlicoinWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5F26E100201E5E8E003C2E48 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F26E0D3201D33EC003C2E48 /* UIViewControllerExtension.swift */; };
+		5F26E107201E6F60003C2E48 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8962A4201AA95300E4D2BC /* Constants.swift */; };
 		5F8962A5201AA95300E4D2BC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8962A4201AA95300E4D2BC /* Constants.swift */; };
 		5F8962A7201AB0C000E4D2BC /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8962A6201AB0C000E4D2BC /* TransactionCell.swift */; };
+		C242AE2C253900D095059C44 /* Pods_TodayGarlicoinWidget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D66203BEEEAF0E581D0CA3C /* Pods_TodayGarlicoinWidget.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5F26E0F2201E3710003C2E48 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5F226E38201A956700D8BD97 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5F26E0E7201E3710003C2E48;
+			remoteInfo = TodayGarlicoinWidget;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5F26E0F8201E3710003C2E48 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				5F26E0F4201E3710003C2E48 /* TodayGarlicoinWidget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		491149BE3A78104BA91C6046 /* Pods_Garlicoin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Garlicoin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,15 +66,23 @@
 		5F226E5B201AA1E900D8BD97 /* DisplayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayVC.swift; sourceTree = "<group>"; };
 		5F26E0D3201D33EC003C2E48 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		5F26E0D5201D757B003C2E48 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
-		5F26E0D7201D83D7003C2E48 /* PriceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceService.swift; sourceTree = "<group>"; };
+		5F26E0D7201D83D7003C2E48 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		5F26E0DA201D8DED003C2E48 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		5F26E0DC201D9D59003C2E48 /* PlaceholderTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderTextField.swift; sourceTree = "<group>"; };
-		5F26E0DE201E35AC003C2E48 /* TodayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayVC.swift; sourceTree = "<group>"; };
-		5F26E0E2201E363F003C2E48 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
+		5F26E0E8201E3710003C2E48 /* TodayGarlicoinWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TodayGarlicoinWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F26E0E9201E3710003C2E48 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		5F26E0EC201E3710003C2E48 /* TodayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayVC.swift; sourceTree = "<group>"; };
+		5F26E0EF201E3710003C2E48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		5F26E0F1201E3710003C2E48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F26E0F9201E4FAE003C2E48 /* Garlicoin.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Garlicoin.entitlements; sourceTree = "<group>"; };
+		5F26E108201E70AE003C2E48 /* TodayGarlicoinWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TodayGarlicoinWidget.entitlements; sourceTree = "<group>"; };
 		5F8962A4201AA95300E4D2BC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5F8962A6201AB0C000E4D2BC /* TransactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
+		6D66203BEEEAF0E581D0CA3C /* Pods_TodayGarlicoinWidget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodayGarlicoinWidget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70639095C52F211B11ED09DA /* Pods-Garlicoin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Garlicoin.release.xcconfig"; path = "Pods/Target Support Files/Pods-Garlicoin/Pods-Garlicoin.release.xcconfig"; sourceTree = "<group>"; };
+		9BA0054B1331C5C033699B82 /* Pods-TodayGarlicoinWidget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayGarlicoinWidget.release.xcconfig"; path = "Pods/Target Support Files/Pods-TodayGarlicoinWidget/Pods-TodayGarlicoinWidget.release.xcconfig"; sourceTree = "<group>"; };
 		D5F2B34E5DB905AE86608A59 /* Pods-Garlicoin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Garlicoin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Garlicoin/Pods-Garlicoin.debug.xcconfig"; sourceTree = "<group>"; };
+		EE02284F2FA8BD8D38109613 /* Pods-TodayGarlicoinWidget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayGarlicoinWidget.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TodayGarlicoinWidget/Pods-TodayGarlicoinWidget.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +94,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5F26E0E5201E3710003C2E48 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F26E0EA201E3710003C2E48 /* NotificationCenter.framework in Frameworks */,
+				C242AE2C253900D095059C44 /* Pods_TodayGarlicoinWidget.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -65,6 +111,8 @@
 			children = (
 				D5F2B34E5DB905AE86608A59 /* Pods-Garlicoin.debug.xcconfig */,
 				70639095C52F211B11ED09DA /* Pods-Garlicoin.release.xcconfig */,
+				EE02284F2FA8BD8D38109613 /* Pods-TodayGarlicoinWidget.debug.xcconfig */,
+				9BA0054B1331C5C033699B82 /* Pods-TodayGarlicoinWidget.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -73,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				5F226E42201A956700D8BD97 /* Garlicoin */,
+				5F26E0EB201E3710003C2E48 /* TodayGarlicoinWidget */,
 				5F226E41201A956700D8BD97 /* Products */,
 				3AC7B0B17186F5C7595211B7 /* Pods */,
 				CB7A86EA22564F06B20954DB /* Frameworks */,
@@ -83,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				5F226E40201A956700D8BD97 /* Garlicoin.app */,
+				5F26E0E8201E3710003C2E48 /* TodayGarlicoinWidget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -90,12 +140,12 @@
 		5F226E42201A956700D8BD97 /* Garlicoin */ = {
 			isa = PBXGroup;
 			children = (
+				5F26E0F9201E4FAE003C2E48 /* Garlicoin.entitlements */,
 				5F8962AA201AB0D600E4D2BC /* Utilities */,
 				5F26E0D9201D83DA003C2E48 /* Services */,
 				5F26E0D2201D339F003C2E48 /* Extensions */,
 				5F8962A8201AB0C400E4D2BC /* Views */,
 				5F226E5A201AA0CB00D8BD97 /* VCs */,
-				5F26E0E1201E35BB003C2E48 /* Widget */,
 				5F226E43201A956700D8BD97 /* AppDelegate.swift */,
 				5F226E47201A956700D8BD97 /* Main.storyboard */,
 				5F226E4D201A956700D8BD97 /* Assets.xcassets */,
@@ -125,18 +175,20 @@
 		5F26E0D9201D83DA003C2E48 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				5F26E0D7201D83D7003C2E48 /* PriceService.swift */,
+				5F26E0D7201D83D7003C2E48 /* DataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
 		};
-		5F26E0E1201E35BB003C2E48 /* Widget */ = {
+		5F26E0EB201E3710003C2E48 /* TodayGarlicoinWidget */ = {
 			isa = PBXGroup;
 			children = (
-				5F26E0DE201E35AC003C2E48 /* TodayVC.swift */,
-				5F26E0E2201E363F003C2E48 /* MainInterface.storyboard */,
+				5F26E108201E70AE003C2E48 /* TodayGarlicoinWidget.entitlements */,
+				5F26E0EC201E3710003C2E48 /* TodayVC.swift */,
+				5F26E0EE201E3710003C2E48 /* MainInterface.storyboard */,
+				5F26E0F1201E3710003C2E48 /* Info.plist */,
 			);
-			path = Widget;
+			path = TodayGarlicoinWidget;
 			sourceTree = "<group>";
 		};
 		5F8962A8201AB0C400E4D2BC /* Views */ = {
@@ -170,6 +222,8 @@
 			isa = PBXGroup;
 			children = (
 				491149BE3A78104BA91C6046 /* Pods_Garlicoin.framework */,
+				5F26E0E9201E3710003C2E48 /* NotificationCenter.framework */,
+				6D66203BEEEAF0E581D0CA3C /* Pods_TodayGarlicoinWidget.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -187,15 +241,36 @@
 				5F226E3E201A956700D8BD97 /* Resources */,
 				0B87E382F3EE8398426D97FB /* [CP] Embed Pods Frameworks */,
 				23C270F061C19CD1CA06A111 /* [CP] Copy Pods Resources */,
+				5F26E0F8201E3710003C2E48 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				5F26E0F3201E3710003C2E48 /* PBXTargetDependency */,
 			);
 			name = Garlicoin;
 			productName = Garlicoin;
 			productReference = 5F226E40201A956700D8BD97 /* Garlicoin.app */;
 			productType = "com.apple.product-type.application";
+		};
+		5F26E0E7201E3710003C2E48 /* TodayGarlicoinWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F26E0F5201E3710003C2E48 /* Build configuration list for PBXNativeTarget "TodayGarlicoinWidget" */;
+			buildPhases = (
+				90493064E5A3FECDD859DFEF /* [CP] Check Pods Manifest.lock */,
+				5F26E0E4201E3710003C2E48 /* Sources */,
+				5F26E0E5201E3710003C2E48 /* Frameworks */,
+				5F26E0E6201E3710003C2E48 /* Resources */,
+				16BF7B738D932BD22B081381 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TodayGarlicoinWidget;
+			productName = TodayGarlicoinWidget;
+			productReference = 5F26E0E8201E3710003C2E48 /* TodayGarlicoinWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -210,6 +285,20 @@
 					5F226E3F201A956700D8BD97 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					5F26E0E7201E3710003C2E48 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -227,6 +316,7 @@
 			projectRoot = "";
 			targets = (
 				5F226E3F201A956700D8BD97 /* Garlicoin */,
+				5F26E0E7201E3710003C2E48 /* TodayGarlicoinWidget */,
 			);
 		};
 /* End PBXProject section */
@@ -237,9 +327,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F226E51201A956700D8BD97 /* LaunchScreen.storyboard in Resources */,
-				5F26E0E3201E363F003C2E48 /* MainInterface.storyboard in Resources */,
 				5F226E4E201A956700D8BD97 /* Assets.xcassets in Resources */,
 				5F226E49201A956700D8BD97 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F26E0E6201E3710003C2E48 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F26E0F0201E3710003C2E48 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +367,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Garlicoin/Pods-Garlicoin-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		16BF7B738D932BD22B081381 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TodayGarlicoinWidget/Pods-TodayGarlicoinWidget-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		23C270F061C19CD1CA06A111 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -283,6 +395,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Garlicoin/Pods-Garlicoin-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		90493064E5A3FECDD859DFEF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TodayGarlicoinWidget-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F290A71890C99BC927AD4972 /* [CP] Check Pods Manifest.lock */ = {
@@ -311,10 +441,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F26E0D6201D757B003C2E48 /* CardView.swift in Sources */,
-				5F26E0D8201D83D7003C2E48 /* PriceService.swift in Sources */,
+				5F26E0D8201D83D7003C2E48 /* DataService.swift in Sources */,
 				5F8962A5201AA95300E4D2BC /* Constants.swift in Sources */,
 				5F226E59201AA0C500D8BD97 /* SearchVC.swift in Sources */,
-				5F26E0DF201E35AC003C2E48 /* TodayVC.swift in Sources */,
 				5F26E0DB201D8DED003C2E48 /* RoundedButton.swift in Sources */,
 				5F8962A7201AB0C000E4D2BC /* TransactionCell.swift in Sources */,
 				5F226E5C201AA1E900D8BD97 /* DisplayVC.swift in Sources */,
@@ -324,7 +453,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5F26E0E4201E3710003C2E48 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F26E107201E6F60003C2E48 /* Constants.swift in Sources */,
+				5F26E0ED201E3710003C2E48 /* TodayVC.swift in Sources */,
+				5F26E100201E5E8E003C2E48 /* UIViewControllerExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5F26E0F3201E3710003C2E48 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5F26E0E7201E3710003C2E48 /* TodayGarlicoinWidget */;
+			targetProxy = 5F26E0F2201E3710003C2E48 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5F226E47201A956700D8BD97 /* Main.storyboard */ = {
@@ -341,6 +488,14 @@
 				5F226E50201A956700D8BD97 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		5F26E0EE201E3710003C2E48 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5F26E0EF201E3710003C2E48 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -394,7 +549,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -445,7 +600,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -457,7 +612,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D5F2B34E5DB905AE86608A59 /* Pods-Garlicoin.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Garlicoin/Garlicoin.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8YCPCF4H7X;
 				INFOPLIST_FILE = Garlicoin/Info.plist;
@@ -473,13 +631,52 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 70639095C52F211B11ED09DA /* Pods-Garlicoin.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Garlicoin/Garlicoin.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8YCPCF4H7X;
 				INFOPLIST_FILE = Garlicoin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MarcusNg.Garlicoin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5F26E0F6201E3710003C2E48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE02284F2FA8BD8D38109613 /* Pods-TodayGarlicoinWidget.debug.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = TodayGarlicoinWidget/TodayGarlicoinWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8YCPCF4H7X;
+				INFOPLIST_FILE = TodayGarlicoinWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MarcusNg.Garlicoin.TodayGarlicoinWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5F26E0F7201E3710003C2E48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BA0054B1331C5C033699B82 /* Pods-TodayGarlicoinWidget.release.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = TodayGarlicoinWidget/TodayGarlicoinWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8YCPCF4H7X;
+				INFOPLIST_FILE = TodayGarlicoinWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MarcusNg.Garlicoin.TodayGarlicoinWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -502,6 +699,15 @@
 			buildConfigurations = (
 				5F226E56201A956700D8BD97 /* Debug */,
 				5F226E57201A956700D8BD97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5F26E0F5201E3710003C2E48 /* Build configuration list for PBXNativeTarget "TodayGarlicoinWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F26E0F6201E3710003C2E48 /* Debug */,
+				5F26E0F7201E3710003C2E48 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

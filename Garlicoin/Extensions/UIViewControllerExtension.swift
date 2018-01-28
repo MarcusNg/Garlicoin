@@ -22,11 +22,17 @@ extension UIViewController {
         view.endEditing(true)
     }
     
+    // Format USD
+    func formattedUSD(usd: Double) -> String {
+        let formatted = String(format: "$%.2f", usd)
+        return formatted
+    }
+    
     // Store Kit Review Request
     func requestReview() {
         let defaults = UserDefaults.standard
         if defaults.value(forKey: "Launches") != nil {
-            if defaults.value(forKey: "Launches") as! Int >= 10 {
+            if defaults.value(forKey: "Launches") as! Int >= 30 {
                 defaults.set(0, forKey: "Launches")
                 SKStoreReviewController.requestReview()
             }

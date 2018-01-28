@@ -14,9 +14,5 @@ target 'Garlicoin' do
 end
 
 target 'TodayGarlicoinWidget' do
-  use_frameworks!
-  
-  pod 'Alamofire'
-  pod 'SwiftyJSON'
+  shared_pods
 end
-
