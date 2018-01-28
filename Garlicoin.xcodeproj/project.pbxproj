@@ -10,12 +10,15 @@
 		360B0311F7CDD8047FC842D9 /* Pods_Garlicoin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 491149BE3A78104BA91C6046 /* Pods_Garlicoin.framework */; };
 		5F226E44201A956700D8BD97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F226E43201A956700D8BD97 /* AppDelegate.swift */; };
 		5F226E49201A956700D8BD97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F226E47201A956700D8BD97 /* Main.storyboard */; };
-		5F226E4C201A956700D8BD97 /* Garlicoin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5F226E4A201A956700D8BD97 /* Garlicoin.xcdatamodeld */; };
 		5F226E4E201A956700D8BD97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F226E4D201A956700D8BD97 /* Assets.xcassets */; };
 		5F226E51201A956700D8BD97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F226E4F201A956700D8BD97 /* LaunchScreen.storyboard */; };
 		5F226E59201AA0C500D8BD97 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F226E58201AA0C500D8BD97 /* SearchVC.swift */; };
 		5F226E5C201AA1E900D8BD97 /* DisplayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F226E5B201AA1E900D8BD97 /* DisplayVC.swift */; };
 		5F26E0D4201D33EC003C2E48 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F26E0D3201D33EC003C2E48 /* UIViewControllerExtension.swift */; };
+		5F26E0D6201D757B003C2E48 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F26E0D5201D757B003C2E48 /* CardView.swift */; };
+		5F26E0D8201D83D7003C2E48 /* PriceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F26E0D7201D83D7003C2E48 /* PriceService.swift */; };
+		5F26E0DB201D8DED003C2E48 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F26E0DA201D8DED003C2E48 /* RoundedButton.swift */; };
+		5F26E0DD201D9D5A003C2E48 /* PlaceholderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F26E0DC201D9D59003C2E48 /* PlaceholderTextField.swift */; };
 		5F8962A5201AA95300E4D2BC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8962A4201AA95300E4D2BC /* Constants.swift */; };
 		5F8962A7201AB0C000E4D2BC /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8962A6201AB0C000E4D2BC /* TransactionCell.swift */; };
 /* End PBXBuildFile section */
@@ -25,13 +28,16 @@
 		5F226E40201A956700D8BD97 /* Garlicoin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Garlicoin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F226E43201A956700D8BD97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F226E48201A956700D8BD97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		5F226E4B201A956700D8BD97 /* Garlicoin.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Garlicoin.xcdatamodel; sourceTree = "<group>"; };
 		5F226E4D201A956700D8BD97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5F226E50201A956700D8BD97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5F226E52201A956700D8BD97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5F226E58201AA0C500D8BD97 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		5F226E5B201AA1E900D8BD97 /* DisplayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayVC.swift; sourceTree = "<group>"; };
 		5F26E0D3201D33EC003C2E48 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		5F26E0D5201D757B003C2E48 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		5F26E0D7201D83D7003C2E48 /* PriceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceService.swift; sourceTree = "<group>"; };
+		5F26E0DA201D8DED003C2E48 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		5F26E0DC201D9D59003C2E48 /* PlaceholderTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderTextField.swift; sourceTree = "<group>"; };
 		5F8962A4201AA95300E4D2BC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5F8962A6201AB0C000E4D2BC /* TransactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
 		70639095C52F211B11ED09DA /* Pods-Garlicoin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Garlicoin.release.xcconfig"; path = "Pods/Target Support Files/Pods-Garlicoin/Pods-Garlicoin.release.xcconfig"; sourceTree = "<group>"; };
@@ -81,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				5F8962AA201AB0D600E4D2BC /* Utilities */,
+				5F26E0D9201D83DA003C2E48 /* Services */,
 				5F26E0D2201D339F003C2E48 /* Extensions */,
 				5F8962A8201AB0C400E4D2BC /* Views */,
 				5F226E5A201AA0CB00D8BD97 /* VCs */,
@@ -89,7 +96,6 @@
 				5F226E4D201A956700D8BD97 /* Assets.xcassets */,
 				5F226E4F201A956700D8BD97 /* LaunchScreen.storyboard */,
 				5F226E52201A956700D8BD97 /* Info.plist */,
-				5F226E4A201A956700D8BD97 /* Garlicoin.xcdatamodeld */,
 			);
 			path = Garlicoin;
 			sourceTree = "<group>";
@@ -111,10 +117,21 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		5F26E0D9201D83DA003C2E48 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5F26E0D7201D83D7003C2E48 /* PriceService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		5F8962A8201AB0C400E4D2BC /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				5F8962A9201AB0CF00E4D2BC /* Cells */,
+				5F26E0D5201D757B003C2E48 /* CardView.swift */,
+				5F26E0DA201D8DED003C2E48 /* RoundedButton.swift */,
+				5F26E0DC201D9D59003C2E48 /* PlaceholderTextField.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -278,13 +295,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F26E0D6201D757B003C2E48 /* CardView.swift in Sources */,
+				5F26E0D8201D83D7003C2E48 /* PriceService.swift in Sources */,
 				5F8962A5201AA95300E4D2BC /* Constants.swift in Sources */,
 				5F226E59201AA0C500D8BD97 /* SearchVC.swift in Sources */,
+				5F26E0DB201D8DED003C2E48 /* RoundedButton.swift in Sources */,
 				5F8962A7201AB0C000E4D2BC /* TransactionCell.swift in Sources */,
 				5F226E5C201AA1E900D8BD97 /* DisplayVC.swift in Sources */,
 				5F226E44201A956700D8BD97 /* AppDelegate.swift in Sources */,
 				5F26E0D4201D33EC003C2E48 /* UIViewControllerExtension.swift in Sources */,
-				5F226E4C201A956700D8BD97 /* Garlicoin.xcdatamodeld in Sources */,
+				5F26E0DD201D9D5A003C2E48 /* PlaceholderTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,19 +491,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		5F226E4A201A956700D8BD97 /* Garlicoin.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				5F226E4B201A956700D8BD97 /* Garlicoin.xcdatamodel */,
-			);
-			currentVersion = 5F226E4B201A956700D8BD97 /* Garlicoin.xcdatamodel */;
-			path = Garlicoin.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 5F226E38201A956700D8BD97 /* Project object */;
 }

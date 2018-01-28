@@ -35,7 +35,13 @@ class SearchVC: UIViewController {
                 }
                 UserDefaults.standard.set(address, forKey: "WalletAddress")
                 UserDefaults.standard.set(json.double, forKey: "GRLC")
-                self.performSegue(withIdentifier: TO_DISPLAY, sender: nil)
+                
+                PriceService.instance.getPriceUSD(completionHandler: { (price, success) in
+                    if success {
+                        self.performSegue(withIdentifier: TO_DISPLAY, sender: nil)
+                    }
+                })
+                
             }
         })
     }

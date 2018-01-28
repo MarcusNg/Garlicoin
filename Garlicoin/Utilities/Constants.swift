@@ -11,3 +11,6 @@ import Foundation
 // Segues
 let TO_DISPLAY = "toDisplay"
 let TO_SEARCH = "toSearch"
+
+// URLS
+let PRICE_URL = "https://api.coinmarketcap.com/v1/ticker/garlicoin/"

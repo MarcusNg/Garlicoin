@@ -16,14 +16,15 @@ class DisplayVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var coinsLbl: UILabel!
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var QRCodeBtn: UIButton!
+//    @IBOutlet weak var QRCodeBtn: UIButton!
     @IBOutlet weak var addressLbl: UILabel!
+    @IBOutlet weak var priceLbl: UILabel!
     
     let refreshControl = UIRefreshControl()
+    let imageView = UIImageView()
     
     var address: String?
-    var showQRCode: Bool = false
+//    var showQRCode: Bool = false
     var timestamps = [String]()
     var amounts = [String]()
     
@@ -43,12 +44,19 @@ class DisplayVC: UIViewController {
             addressLbl.text = "\(walletAddress)"
             if let grlc = UserDefaults.standard.double(forKey: "GRLC") as? Double {
                 coinsLbl.text = String(describing: grlc)
+                if let usdPrice = UserDefaults.standard.double(forKey: "Price") as? Double {
+                    let price: Double = grlc * usdPrice
+                    let formatted = String(format: "$%.2f", price)
+                    priceLbl.text = formatted
+                }
             }
         }
 
         update { (success) in
             if success {
-                self.tableView.reloadData()
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
             }
         }
     }
@@ -76,18 +84,21 @@ class DisplayVC: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
-    @IBAction func QRCodeBtnPressed(_ sender: Any) {
-        if !showQRCode {
-            let QRURL = URL(string: "http://explorer.grlc-bakery.fun/qr/\(address!)")
-            self.imageView.kf.setImage(with: QRURL)
-            self.QRCodeBtn.setTitle("Hide QR Code", for: .normal)
-            self.showQRCode = true
-        } else {
-            imageView.image = #imageLiteral(resourceName: "garlicoin")
-            QRCodeBtn.setTitle("Show QR Code", for: .normal)
-            showQRCode = false
-        }
-    }
+//    @IBAction func QRCodeBtnPressed(_ sender: Any) {
+//        if !showQRCode {
+//            let QRURL = URL(string: "http://explorer.grlc-bakery.fun/qr/\(address!)")
+//            imageView.kf.setImage(with: QRURL)
+//            imageView.frame = CGRect(x: self.view.frame.width / 1.5, y: self.view.frame.height / 1.5, width: 151, height: 151)
+//            self.QRCodeBtn.setTitle("Hide QR Code", for: .normal)
+//            self.showQRCode = true
+//            view.addSubview(imageView)
+//        } else {
+//            imageView.removeFromSuperview()
+//            QRCodeBtn.setTitle("Show QR Code", for: .normal)
+//
+//            showQRCode = false
+//        }
+//    }
     
     @IBAction func removeBtnPressed(_ sender: Any) {
         let alert = UIAlertController(title: "Remove Saved Wallet Address", message: "Are you sure?", preferredStyle: .alert)
@@ -131,7 +142,7 @@ class DisplayVC: UIViewController {
                     self.coinsLbl.text = String(describing: coins)
                 }
                 ctr += 1
-                if ctr == 2 {
+                if ctr == 3 {
                     completionHandler(true)
                     return
                 }
@@ -142,13 +153,27 @@ class DisplayVC: UIViewController {
                     self.tableView.reloadData()
                 }
                 ctr += 1
-                if ctr == 2 {
+                if ctr == 3 {
+                    completionHandler(true)
+                    return
+                }
+            })
+            // Price
+            PriceService.instance.getPriceUSD(completionHandler: { (usdPrice, success)  in
+                if success {
+                    if let grlc = UserDefaults.standard.double(forKey: "GRLC") as? Double {
+                        let price: Double = grlc * usdPrice
+                        let formatted = String(format: "$%.2f", price)
+                        self.priceLbl.text = formatted
+                    }
+                }
+                ctr += 1
+                if ctr == 3 {
                     completionHandler(true)
                     return
                 }
             })
         }
-
     }
     
     func balanceUpdate(completionHandler: @escaping (_ success: Bool) -> ()) {
@@ -186,7 +211,7 @@ class DisplayVC: UIViewController {
 //                        print(transactionElements.array())
                         for transaction: Element in transactionElements.array() {
 
-                            if tCtr < 4 || aCtr < 4 {
+                            if tCtr < 5 || aCtr < 5 {
                                 let data: String = try! transaction.text()
                                 if data.first == "+" || data.first == "-" {
                                     self.amounts.append(data)
@@ -210,6 +235,13 @@ class DisplayVC: UIViewController {
         }
     }
     
+    func updatePrice() {
+        if let grlc = UserDefaults.standard.double(forKey: "GRLC") as? Double {
+            if let priceUSD = UserDefaults.standard.double(forKey: "Price") as? Double {
+                priceLbl.text = String(describing: grlc * priceUSD)
+            }
+        }
+    }
 }
 
 extension DisplayVC: UITableViewDelegate, UITableViewDataSource {
@@ -229,6 +261,10 @@ extension DisplayVC: UITableViewDelegate, UITableViewDataSource {
         cell.configure(timestamp: timestamps[indexPath.row], amount: amounts[indexPath.row])
         cell.selectionStyle = .none
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "TRANSACTIONS"
     }
     
 }
