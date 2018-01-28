@@ -18,6 +18,7 @@ class DisplayVC: UIViewController {
     @IBOutlet weak var coinsLbl: UILabel!
 //    @IBOutlet weak var QRCodeBtn: UIButton!
     @IBOutlet weak var addressLbl: UILabel!
+    @IBOutlet weak var valueLbl: UILabel!
     @IBOutlet weak var priceLbl: UILabel!
     
     let refreshControl = UIRefreshControl()
@@ -46,8 +47,8 @@ class DisplayVC: UIViewController {
                 coinsLbl.text = String(describing: grlc)
                 if let usdPrice = UserDefaults.standard.double(forKey: "Price") as? Double {
                     let price: Double = grlc * usdPrice
-                    let formatted = String(format: "$%.2f", price)
-                    priceLbl.text = formatted
+                    valueLbl.text = formattedUSD(usd: price)
+                    priceLbl.text = formattedUSD(usd: usdPrice)
                 }
             }
         }
@@ -163,8 +164,7 @@ class DisplayVC: UIViewController {
                 if success {
                     if let grlc = UserDefaults.standard.double(forKey: "GRLC") as? Double {
                         let price: Double = grlc * usdPrice
-                        let formatted = String(format: "$%.2f", price)
-                        self.priceLbl.text = formatted
+                        self.valueLbl.text = self.formattedUSD(usd: price)
                     }
                 }
                 ctr += 1
@@ -238,10 +238,17 @@ class DisplayVC: UIViewController {
     func updatePrice() {
         if let grlc = UserDefaults.standard.double(forKey: "GRLC") as? Double {
             if let priceUSD = UserDefaults.standard.double(forKey: "Price") as? Double {
-                priceLbl.text = String(describing: grlc * priceUSD)
+                valueLbl.text = String(describing: grlc * priceUSD)
+                priceLbl.text = String(describing: priceUSD)
             }
         }
     }
+    
+    func formattedUSD(usd: Double) -> String {
+        let formatted = String(format: "$%.2f", usd)
+        return formatted
+    }
+    
 }
 
 extension DisplayVC: UITableViewDelegate, UITableViewDataSource {
