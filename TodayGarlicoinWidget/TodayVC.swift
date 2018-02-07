@@ -26,6 +26,8 @@ class TodayVC: UIViewController, NCWidgetProviding {
         priceLbl.layer.cornerRadius = 5
         coinsLbl.layer.cornerRadius = 5
         valueLbl.layer.cornerRadius = 5
+        
+        setupLabels()
     }
     
     func getData(completionHandler: @escaping (_ balance: Double,_ usdPrice: Double,_ success: Bool) -> ()) {
@@ -79,20 +81,24 @@ class TodayVC: UIViewController, NCWidgetProviding {
         getData { (balance, usdPrice, success) in
             if success {
                 let price: Double = balance * usdPrice
-                self.coinsLbl.text = String(describing: balance)
+                self.coinsLbl.text = "\(balance)"
                 self.valueLbl.text = self.formattedUSD(usd: price)
                 self.priceLbl.text = self.formattedUSD(usd: usdPrice)
                 completionHandler(NCUpdateResult.newData)
             } else {
-                let savedBalance = defaults?.value(forKey: "GRLC") as? Double
-                let savedPrice = defaults?.value(forKey: "Price") as? Double
-                let price: Double = savedBalance! * savedPrice!
-                self.coinsLbl.text = String(describing: balance)
-                self.valueLbl.text = self.formattedUSD(usd: price)
-                self.priceLbl.text = self.formattedUSD(usd: savedPrice!)
+                self.setupLabels()
                 completionHandler(NCUpdateResult.noData)
             }
         }
+    }
+    
+    func setupLabels() {
+        let savedBalance = defaults?.value(forKey: "GRLC") as? Double
+        let savedPrice = defaults?.value(forKey: "Price") as? Double
+        let price: Double = savedBalance! * savedPrice!
+        self.coinsLbl.text = "\(savedBalance!)"
+        self.valueLbl.text = self.formattedUSD(usd: price)
+        self.priceLbl.text = self.formattedUSD(usd: savedPrice!)
     }
     
 }
